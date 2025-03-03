@@ -217,3 +217,40 @@ input[type="text"]{
 .search-form__label:has(:focus-visible){
   outline: 1px solid #fff;
 }
+
+.search-form__pseudo-checkbox{
+  border: 1px solid #fff;
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+  align-self: center;
+}
+
+
+
+ .search-form__pseudo-checkbox::after{
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+ }
+
+/* выключённый */
+input[type="checkbox"]:checked + span::after {
+  display: block;
+  cursor: pointer;
+  border: 1px solid #545050;
+} /* выбранный */
+
+.search-form__pseudo-checkbox:has(:focus-visible){
+  outline: 1px solid #fff;
+}
+
+.search-form__label .search-form__label-text:hover{
+  cursor: pointer;
+  border-bottom: 1px solid #fff;
+}
+
+
