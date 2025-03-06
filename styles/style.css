@@ -207,8 +207,9 @@ ol {
   font-size: 18px;
   line-height: 16.2px;
   letter-spacing: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
@@ -286,7 +287,7 @@ input[type="checkbox"]:checked + span::after {
   outline: 1px solid #fff;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   cursor: pointer;
   text-decoration: underline;
 }
